@@ -57,6 +57,10 @@ export default function Navbar() {
           <a href="#contact" className="block lg:inline-block hover:scale-110 transition-transform mb-4 lg:mb-0">
             Contact
           </a>
+          {/* Mobile-only Resume link */}
+          <a href="/James_Fu_Resume_2024.pdf" className="block lg:hidden hover:scale-110 transition-transform mb-4 lg:mb-0">
+            Resume
+          </a>
         </div>
       </div>
     </nav>
