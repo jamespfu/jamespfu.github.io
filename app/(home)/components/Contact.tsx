@@ -27,7 +27,7 @@ export const Contact = () => {
             </div>
             <div className="flex items-center gap-5">
               <FontAwesomeIcon icon={faPhone} className="w-4 h-4" />
-              <p>+925-875-8886</p>
+              <p>+1 925-875-8886</p>
             </div>
             <div className="flex items-center gap-5">
               <FontAwesomeIcon icon={faMapMarkerAlt} className="w-4 h-4" />
