@@ -5,15 +5,15 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between py-4 lg:py-10 bg-transparent">
-      {/* Logo */}
-      <div className="flex items-center text-white font-bold text-2xl">
+  <nav className="flex items-center justify-between pt-4 pb-0 lg:pt-2 lg:pb-12 bg-transparent">
+  {/* Logo */}
+      <a href="#" className="flex items-center text-white text-2xl font-light">
         <img 
           src="/sig.png" 
           alt="Logo" 
           className="invert h-10"  // Adjust height as needed to align with navbar
         />
-      </div>
+      </a>
 
       {/* Mobile Menu Icon */}
       <div className="block lg:hidden">
@@ -44,23 +44,23 @@ export default function Navbar() {
           isOpen ? "block" : "hidden"
         } absolute top-[90px] right-[20px] bg-black bg-opacity-90 text-white rounded-lg shadow-lg lg:relative lg:top-0 lg:right-0 lg:flex lg:items-center lg:bg-transparent lg:shadow-none lg:rounded-none z-50 p-8 lg:p-0`}
       >
-        <div className="lg:flex lg:justify-center lg:gap-12 text-white text-lg">
-          <a href="#" className="block lg:inline-block hover:scale-110 transition-transform mb-4 lg:mb-0">
-            Home
-          </a>
+        <div className="lg:flex lg:justify-center lg:gap-12 text-gray-100 text-md font-normal nav-links">
           <a href="#about" className="block lg:inline-block hover:scale-110 transition-transform mb-4 lg:mb-0">
             About
           </a>
           <a href="#projects" className="block lg:inline-block hover:scale-110 transition-transform mb-4 lg:mb-0">
-            Work
+            Projects
           </a>
           <a href="#contact" className="block lg:inline-block hover:scale-110 transition-transform mb-4 lg:mb-0">
             Contact
           </a>
-          {/* Mobile-only Resume link */}
-          <a href="/James_Fu_Resume_2024.pdf" className="block lg:hidden hover:scale-110 transition-transform mb-4 lg:mb-0">
+          <a href="/James_Fu_Resume_2024.pdf" className="block lg:inline-block hover:scale-110 transition-transform mb-4 lg:mb-0">
             Resume
           </a>
+          {/* Mobile-only Resume link */}
+          {/* <a href="/James_Fu_Resume_2024.pdf" className="block lg:hidden hover:scale-110 transition-transform mb-4 lg:mb-0">
+            Resume
+          </a> */}
         </div>
       </div>
     </nav>

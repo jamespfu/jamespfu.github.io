@@ -90,6 +90,7 @@ html, body {
 .intro {
   background: linear-gradient(120deg, var(--peach), var(--mauve)) !important;
   background-clip: text !important;
+  line-height: 120%;
   -webkit-background-clip: text; /* for better browser compatibility */
   color: transparent !important; /* hides the original color so the gradient shows */
 }
@@ -110,4 +111,22 @@ html, body {
 .fade-out {
   transition: opacity 2s ease;
   opacity: 0;
+}
+
+.nav-links a {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.introMob {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .introWrap {
+    display: none;
+  }
+  .introMob {
+    display: block;
+  }
 }
