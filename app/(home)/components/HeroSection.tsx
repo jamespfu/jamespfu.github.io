@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import React from 'react';
-import { MovingBorderBtn } from './ui/moving-border';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 export default function HeroSection() {
@@ -34,7 +33,7 @@ export default function HeroSection() {
               <span className="intro">Nice to meet you!<br/>I&apos;m James Fu </span>👋
             </div>
             <div className="introMob">
-              <span className="intro">Hello! I'm James Fu </span>👋
+              <span className="intro">Hello! I&apos;m James Fu </span>👋
             </div>
           </h1>
         </div>
@@ -68,15 +67,6 @@ export default function HeroSection() {
     <div className="glow absolute top-[50%] right-1/2 -z-10"></div>
   </div>
 
-  {/* Centered "View Resume" Button */}
-  <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 hover:scale-105">
-    {/* <MovingBorderBtn
-      borderRadius="0.5rem"
-      className="p-3 font-semibold"
-    >
-      <a href="/James_Fu_Resume_2024.pdf">📄 &nbsp;View Resume</a>
-    </MovingBorderBtn> */}
-  </div>
 
       </div>
     </div>

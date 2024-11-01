@@ -26,7 +26,7 @@ export default function Project() {
 
     return (
         <div id="projects" className="p-5 sm:p-0 py-10 mt-20">
-            <Title text="Projects" className="flex flex-col items-center justify-center" />
+            <Title text="Recent Work" className="flex flex-col items-center justify-center" />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 pt-10 gap-5">
                 {projects.map((project, index) => (

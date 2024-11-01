@@ -1,5 +1,6 @@
 import React from 'react';
 import Title from './Title';
+import { MovingBorderBtn } from './ui/moving-border';
 
 interface AboutSectionProps {
   title: string;
@@ -19,13 +20,21 @@ export default function About() {
       <Title text="About Me" className="flex flex-col items-center justify-center mb-10" />
 
       <div className="flex flex-col md:flex-row items-center md:items-stretch">
-        {/* Title section taking up 1/3 of the width */}
-        <div className="md:w-1/3 md:pr-8 sm:pb-4 pb-5 mr-5 flex justify-center"> {/* Center image on mobile */}
+        {/* Image and Button Container */}
+        <div className="md:w-1/3 md:pr-8 sm:pb-4 pb-5 mr-5 flex justify-center relative"> {/* Center image on mobile and set relative position */}
           <img
             src="/IMG_7186.JPG"
             alt="James Fu"
             className="max-w-[12rem] md:max-w-full h-auto object-cover rounded-2xl mx-auto"
           />
+          <div className="absolute -bottom-[10px] z-300 w-full flex justify-center hover:scale-105 transform transition duration-200"> {/* Adjust bottom positioning */}
+            <MovingBorderBtn
+              borderRadius="0.5rem"
+              className="p-3 font-semibold"
+            >
+              <a href="#projects">📄 &nbsp; View Resume</a>
+            </MovingBorderBtn>
+          </div>
         </div>
 
         {/* Content section taking up 2/3 of the width */}
@@ -42,7 +51,7 @@ export default function About() {
           {/* Second section */}
           <AboutSection 
             title="📘 🟠" 
-            description="Currently, I'm a Master's student in Data Science at UT austin, where I'm learning to build language models by working with transformers and architectures like GPT-3. My interests lie in uncovering patterns in data and I am particularly interested in applying machine learning to healthcare to make it more accessible and impactful."
+            description="Currently, I'm a Master's student in Data Science at UT Austin, where I'm learning to build language models by working with transformers and architectures like GPT-3. My interests lie in uncovering patterns in data and I am particularly interested in applying machine learning to healthcare to make it more accessible and impactful."
           />
 
           {/* Horizontal divider with even spacing */}
