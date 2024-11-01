@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useMemo } from "react";
 import { IconType } from "react-icons"; 
-import { FontAwesomeIcon, IconDefinition } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Define the colors array
 const ringColors = [
