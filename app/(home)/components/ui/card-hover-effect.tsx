@@ -3,8 +3,8 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useMemo } from "react";
-import { IconType } from "react-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconType } from "react-icons"; 
+import { FontAwesomeIcon, IconDefinition } from '@fortawesome/react-fontawesome';
 
 // Define the colors array
 const ringColors = [
@@ -30,7 +30,7 @@ export const HoverEffect = ({
 }: {
   items: {
     text: string;
-    Icon: IconType | typeof faDatabase;
+    Icon: IconType | IconDefinition; // Use IconDefinition type for FontAwesome icons
   }[];
   className?: string;
 }) => {
@@ -40,7 +40,8 @@ export const HoverEffect = ({
   const itemRingColors = useMemo(() => getRandomColors(items.length), [items.length]);
 
   // Helper function to check if the icon is FontAwesome
-  const isFontAwesomeIcon = (icon: any): icon is typeof faDatabase => typeof icon === "object";
+  const isFontAwesomeIcon = (icon: IconType | IconDefinition): icon is IconDefinition =>
+    typeof icon === "object" && "iconName" in icon;
 
   return (
     <div
