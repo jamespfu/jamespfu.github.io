@@ -8,13 +8,11 @@ import {
     SiPytorch, 
     SiTensorflow, 
     SiPandas, 
-    SiNumpy, 
     SiScikitlearn, 
     SiTableau,
     SiGit,
     SiReact, 
 } from 'react-icons/si';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons'; // Database icon for SQL
 
 export default function Skills() {
