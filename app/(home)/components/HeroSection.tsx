@@ -73,7 +73,6 @@ export default function HeroSection() {
     </MovingBorderBtn>
   </div>
 
-
       </div>
     </div>
   );
