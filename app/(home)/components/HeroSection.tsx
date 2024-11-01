@@ -58,8 +58,8 @@ export default function HeroSection() {
     {/* Four Multi-color Gradient Squares */}
     <div className="blob bg-gradient-to-r from-[#f5e0dc] via-[#f2cdcd] to-[#cba6f7] rounded-2xl w-32 h-32 z-12"></div>
     <div className="blob bg-gradient-to-r from-[#f38ba8] via-[#eba0ac] to-[#fab387] rounded-full w-32 h-32 z-12"></div>
-    <div className="blob bg-gradient-to-r from-[#a6e3a1] via-[#94e2d5] to-[#89dceb] rounded-2xl w-32 h-32 ml-6 z-12"></div>
-    <div className="blob bg-gradient-to-r from-[#8aadf4] via-[#babbf1] to-[#f4b8e4] rounded-full w-32 h-32 ml-6 z-12"></div>
+    <div className="blob bg-gradient-to-r from-[#a6e3a1] via-[#94e2d5] to-[#89dceb] rounded-2xl w-32 h-32 ml-8 z-12"></div>
+    <div className="blob bg-gradient-to-r from-[#8aadf4] via-[#babbf1] to-[#f4b8e4] rounded-full w-32 h-32 ml-8 z-12"></div>
     <div className="glow absolute top-[40%] right-1/2 -z-10"></div>
   </div>
 
