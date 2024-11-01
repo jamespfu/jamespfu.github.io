@@ -3,7 +3,8 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useMemo } from "react";
-import { IconType } from "react-icons"; // Icon type from react-icons
+import { IconType } from "react-icons"; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Define the colors array
 const ringColors = [
@@ -20,7 +21,7 @@ const ringColors = [
 ];
 
 // Function to randomly select a color for each item initially
-const getRandomColors = (length: number): string[] => // Specify return type as string[]
+const getRandomColors = (length: number): string[] =>
   Array.from({ length }, () => ringColors[Math.floor(Math.random() * ringColors.length)]);
 
 export const HoverEffect = ({
@@ -29,7 +30,8 @@ export const HoverEffect = ({
 }: {
   items: {
     text: string;
-    Icon: IconType;
+    Icon: IconType | typeof faDatabase;
+    isFontAwesome?: boolean;
   }[];
   className?: string;
 }) => {
@@ -46,8 +48,8 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => {
-        const Icon = item.Icon;
-        const ringColor = itemRingColors[idx]; // Assign precomputed color for each item
+        const { Icon, isFontAwesome } = item;
+        const ringColor = itemRingColors[idx];
 
         return (
           <div
@@ -77,8 +79,14 @@ export const HoverEffect = ({
               className="rounded-md w-full p-4 overflow-hidden bg-black group-hover:ring-2 relative z-20 transition-all duration-500 cursor-pointer"
               style={{ boxShadow: hoveredIndex === idx ? `0 0 0 2px ${ringColor}` : "none" }}
             >
-              <div className="py-10 z-50 relative space-y-5">
-                <Icon className="w-8 h-8 mx-auto" /> {/* Icon component */}
+              <div className="flex flex-col items-center space-y-5 py-10 z-50 relative">
+                <div className="flex items-center justify-center w-8 h-8"> {/* Centered icon wrapper */}
+                  {isFontAwesome ? (
+                    <FontAwesomeIcon icon={Icon} className="w-full h-full" />
+                  ) : (
+                    <Icon className="w-full h-full" />
+                  )}
+                </div>
                 <p className="text-lg font-bold text-center text-gray-300">
                   {item.text}
                 </p>

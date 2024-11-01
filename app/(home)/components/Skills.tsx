@@ -14,6 +14,8 @@ import {
     SiGit,
     SiReact, 
 } from 'react-icons/si';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDatabase } from '@fortawesome/free-solid-svg-icons'; // Database icon for SQL
 
 export default function Skills() {
     const skills = [
@@ -21,11 +23,11 @@ export default function Skills() {
         { text: 'PyTorch', Icon: SiPytorch },  
         { text: 'TensorFlow', Icon: SiTensorflow },  
         { text: 'Pandas', Icon: SiPandas },  
-        { text: 'NumPy', Icon: SiNumpy },  
+        { text: 'SQL', Icon: faDatabase, isFontAwesome: true }, // Specify FontAwesome icons with a flag
         { text: 'scikit-learn', Icon: SiScikitlearn },  
         { text: 'Tableau', Icon: SiTableau },  
         { text: 'Git', Icon: SiGit },  
-        { text: 'React', Icon: SiReact, },
+        { text: 'React', Icon: SiReact },
     ];
 
     return (
@@ -35,4 +37,3 @@ export default function Skills() {
         </div>
     );
 }
-
