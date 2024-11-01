@@ -26,7 +26,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <div className="min-h-[60vh] flex flex-col-reverse gap-14 lg:gap-0 lg:flex-row items-center justify-between">
+    <div className="min-h-[60vh] flex flex-col-reverse -mt-[150px] lg:-mt-[0px] lg:flex-row items-center justify-between">
       <div className="space-y-8 lg:text-left">
         <div>
           <h1 className="text-5xl lg:text-5xl font-black">

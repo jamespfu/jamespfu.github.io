@@ -48,7 +48,7 @@ export default function Navbar() {
           <a href="#" className="block lg:inline-block hover:scale-110 transition-transform mb-4 lg:mb-0">
             Home
           </a>
-          <a href="#" className="block lg:inline-block hover:scale-110 transition-transform mb-4 lg:mb-0">
+          <a href="#about" className="block lg:inline-block hover:scale-110 transition-transform mb-4 lg:mb-0">
             About
           </a>
           <a href="#projects" className="block lg:inline-block hover:scale-110 transition-transform mb-4 lg:mb-0">

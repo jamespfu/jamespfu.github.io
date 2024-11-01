@@ -8,14 +8,14 @@ interface AboutSectionProps {
 
 const AboutSection: React.FC<AboutSectionProps> = ({ title, description }) => (
   <div className="py-3"> {/* Consistent padding */}
-    <h2 className="text-xl font-bold text-white mb-2">{title}</h2>
+    <h2 className="text-lg font-bold text-white mb-2">{title}</h2>
     <p className="text-gray-400">{description}</p>
   </div>
 );
 
 export default function About() {
   return (
-    <div className="p-0">
+    <div id="about" className="p-0">
       <Title text="About Me" className="flex flex-col items-center justify-center mb-10" />
 
       <div className="flex flex-col md:flex-row items-stretch">
@@ -33,8 +33,8 @@ export default function About() {
         <div className="md:w-2/3 flex flex-col">
           {/* First section */}
           <AboutSection 
-            title="Nice to meet you," 
-            description="I'm James, a recent UCLA graduate with a B.S. in Computational Biology (Data Science specialization). Over the past few years, I've developed a passion for applying machine learning to real-world challenges, especially in data science and ML."
+            title="I'm James," 
+            description="a recent UCLA graduate with a B.S. in Computational Biology (Data Science specialization). Over the past few years, I've developed a passion for applying machine learning to real-world challenges, especially in data science and ML."
           />
 
           {/* Horizontal divider with even spacing */}
@@ -51,8 +51,8 @@ export default function About() {
 
           {/* Third section */}
           <AboutSection 
-            title="My hobbies include" 
-            description="trying new recipes and recreating cafe drinks, playing tennis, and building custom keyboards for friends. Over the past 7+ years, I've developed various coding projects, with a primary focus on Python and full-stack development. In my spare time, I’m working on a cost equity modeler that helps users determine fair pricing for medical services by comparing insurance and non-insurance rates and implementing synthetic data generation to enhance datasets."
+            title="In my free time," 
+            description="I enjoy trying new recipes and recreating cafe drinks, playing tennis, and building custom keyboards for friends. Over the past 7+ years, I've developed various coding projects, with a primary focus on Python and full-stack development. In my spare time, I’m working on a cost equity modeler that helps users determine fair pricing for medical services by comparing insurance and non-insurance rates and implementing synthetic data generation to enhance datasets."
           />
         </div>
       </div>
