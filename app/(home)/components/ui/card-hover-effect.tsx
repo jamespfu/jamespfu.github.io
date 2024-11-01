@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useMemo } from "react";
-import { IconType } from "react-icons"; 
+import { IconType } from "react-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Define the colors array
@@ -31,7 +31,6 @@ export const HoverEffect = ({
   items: {
     text: string;
     Icon: IconType | typeof faDatabase;
-    isFontAwesome?: boolean;
   }[];
   className?: string;
 }) => {
@@ -39,6 +38,9 @@ export const HoverEffect = ({
 
   // Generate a fixed color for each item on mount
   const itemRingColors = useMemo(() => getRandomColors(items.length), [items.length]);
+
+  // Helper function to check if the icon is FontAwesome
+  const isFontAwesomeIcon = (icon: any): icon is typeof faDatabase => typeof icon === "object";
 
   return (
     <div
@@ -48,7 +50,7 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => {
-        const { Icon, isFontAwesome } = item;
+        const { Icon } = item;
         const ringColor = itemRingColors[idx];
 
         return (
@@ -81,7 +83,7 @@ export const HoverEffect = ({
             >
               <div className="flex flex-col items-center space-y-5 py-10 z-50 relative">
                 <div className="flex items-center justify-center w-8 h-8"> {/* Centered icon wrapper */}
-                  {isFontAwesome ? (
+                  {isFontAwesomeIcon(Icon) ? (
                     <FontAwesomeIcon icon={Icon} className="w-full h-full" />
                   ) : (
                     <Icon className="w-full h-full" />
