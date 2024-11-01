@@ -32,13 +32,13 @@ export default function About() {
               borderRadius="0.5rem"
               className="p-3 font-semibold"
             >
-              <a href="#projects">📄 &nbsp; View Resume</a>
+              <a href="/James_Fu_Resume_2024.pdf">📄 &nbsp; View Resume</a>
             </MovingBorderBtn>
           </div>
         </div>
 
         {/* Content section taking up 2/3 of the width */}
-        <div className="md:w-2/3 flex flex-col items-center md:items-start"> {/* Center text content */}
+        <div className="md:w-2/3 flex flex-col items-center md:items-start mt-10 lg:mt-0 md:mt-0"> {/* Center text content */}
           {/* First section */}
           <AboutSection 
             title="🎓 🔵" 
