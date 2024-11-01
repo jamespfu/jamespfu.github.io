@@ -5,7 +5,7 @@ import Title from './Title';
 
 export const Contact = () => {
   return (
-    <section id="contact" className="flex flex-col items-center justify-center gap-20 mx-10 lg:mx-36 my-20">
+    <section id="contact" className="flex flex-col items-center justify-center gap-10 mx-10 lg:mx-36 my-20">
       <div className="text-center relative">
         <Title text="Get in touch" className="flex flex-col items-center justify-center" />
       </div>

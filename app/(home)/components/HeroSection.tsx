@@ -64,10 +64,10 @@ export default function HeroSection() {
   </div>
 
   {/* Centered "View Resume" Button */}
-  <div className="absolute inset-0 flex items-center justify-center">
+  <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 hover:scale-105">
     <MovingBorderBtn
       borderRadius="0.5rem"
-      className="p-3 font-semibold transition-transform duration-300 hover:scale-105"
+      className="p-3 font-semibold"
     >
       <a href="/James_Fu_Resume_2024.pdf">📄 &nbsp;View Resume</a>
     </MovingBorderBtn>
