@@ -11,7 +11,7 @@ export default function Footer() {
           href="https://catppuccin.com/" 
           className="text-blue-200 no-underline hover:text-white hover:underline transition duration-200"
         >
-          catppuccin =^..^=
+          catppuccin =^. .^=
         </a>
       </h6>
     </div>
