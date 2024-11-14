@@ -130,3 +130,9 @@ html, body {
     display: block;
   }
 }
+
+@media (max-width: 1024px) {
+  .shapes {
+    display: none;
+  }
+}

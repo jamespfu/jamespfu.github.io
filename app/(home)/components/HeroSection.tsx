@@ -58,7 +58,7 @@ export default function HeroSection() {
       </div>
       <div className="relative pt-8 sm:pt-0 sm:block hidden h-0 sm:h-auto">
   {/* Rotated Square Container */}
-  <div className="grid grid-cols-2 gap-[4px] w-72 h-72 rotate-[-30deg]">
+  <div className="shapes grid grid-cols-2 gap-[4px] w-72 h-72 rotate-[-30deg]">
     {/* Four Multi-color Gradient Squares */}
     <div className="blob bg-gradient-to-r from-[#f5e0dc] via-[#f2cdcd] to-[#cba6f7] rounded-2xl w-32 h-32 z-12"></div>
     <div className="blob bg-gradient-to-r from-[#f38ba8] via-[#eba0ac] to-[#fab387] rounded-full w-32 h-32 z-12"></div>
