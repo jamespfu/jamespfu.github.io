@@ -14,11 +14,19 @@ export default function Project() {
             background: "bg-zinc-900",
             description: "Built a custom Transformer model achieving 99.67% accuracy in character frequency classification and extended it to a full language model with a low perplexity of 6.13 for next-character prediction, using Transformer-based sequence modeling for accurate and efficient language prediction.",
         },
+        // {
+        //     title: "ML-Based Astrocyte Subtype Quantification",
+        //     tech: [SiPython, SiPytorch, SiTensorflow],
+        //     link: "https://github.com/jamespfu/astrocyte-ML-pipeline/tree/main",
+        //     cover: "/project-2.png",
+        //     background: "bg-zinc-900",
+        //     description: "Developed a pipeline using unsupervised machine learning to identify six astrocyte subtypes through spatial clustering of spatial transcriptomic data from the Allen Mouse Brain Atlas, discovered 104 astrocyte-specific genes through differential expression analysis with Bonferroni correction across 10+ million cells.",
+        // },
         {
-            title: "ML-Based Astrocyte Subtype Quantification",
+            title: "Enhancing Robustness in Natural Language Inference Models",
             tech: [SiPython, SiPytorch, SiTensorflow],
-            link: "https://github.com/jamespfu/astrocyte-ML-pipeline/tree/main",
-            cover: "/project-2.png",
+            link: "/NLI Robustness Study - James Fu.pdf",
+            cover: "/SNLI_data_map.png",
             background: "bg-zinc-900",
             description: "Developed a pipeline using unsupervised machine learning to identify six astrocyte subtypes through spatial clustering of spatial transcriptomic data from the Allen Mouse Brain Atlas, discovered 104 astrocyte-specific genes through differential expression analysis with Bonferroni correction across 10+ million cells.",
         },
@@ -54,7 +62,7 @@ export default function Project() {
                                         </div>
                                         <div className="mt-10"> {/* Fixed typo from mt=[10px] to mt-10 */}
                                             <a href={project.link} className="inline-flex text-sm items-center px-4 py-2 text-white font-semibold rounded-sm bg-gradient-to-r from-indigo-900 to-purple-800 hover:from-indigo-800 hover:to-purple-700 shadow-lg">
-                                                Github Repo
+                                                Read More
                                             </a>
                                         </div>
                                     </div>
