@@ -41,7 +41,7 @@ export default function About() {
         <div className="md:w-2/3 flex flex-col items-center md:items-start mt-10 lg:mt-0 md:mt-0"> {/* Center text content */}
           {/* First section */}
           <AboutSection 
-            title="🎓 🔵" 
+            title="💙 🐻" 
             description="I recently graduated from UCLA with a B.S. in Computational Biology (Data Science specialization). Over the few years, I've developed a passion for applying machine learning to real-world challenges, especially in data science and ML."
           />
 
@@ -50,7 +50,7 @@ export default function About() {
 
           {/* Second section */}
           <AboutSection 
-            title="📘 🟠" 
+            title="📘 🤘" 
             description="Currently, I'm a Master's student in Data Science at UT Austin, where I'm learning to build language models by working with transformers and architectures like GPT-3. My interests lie in uncovering patterns in data and I am particularly interested in applying machine learning to healthcare to make it more accessible and impactful."
           />
 
