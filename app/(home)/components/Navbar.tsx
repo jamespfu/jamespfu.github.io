@@ -1,17 +1,17 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-  <nav className="flex items-center justify-between pt-4 pb-0 lg:pt-4 lg:pb-12 bg-transparent">
-  {/* Logo */}
-      <a href="#" className="flex items-center text-white text-2xl font-light">
+    <nav className="flex items-center justify-between pt-4 pb-0 lg:pt-4 lg:pb-12 bg-transparent">
+      {/* Logo */}
+      <a href="#" className="flex items-center text-white text-2xl">
         <img 
           src="/sig.png" 
           alt="Logo" 
-          className="invert h-10"  // Adjust height as needed to align with navbar
+          className="invert h-10" // Adjust height as needed to align with navbar
         />
       </a>
 
@@ -42,25 +42,33 @@ export default function Navbar() {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } absolute top-[90px] right-[20px] bg-black bg-opacity-90 text-white rounded-lg shadow-lg lg:relative lg:top-0 lg:right-0 lg:flex lg:items-center lg:bg-transparent lg:shadow-none lg:rounded-none z-50 p-8 lg:p-0`}
+        } absolute top-[90px] right-[20px] bg-black bg-opacity-20 text-white rounded-lg shadow-lg lg:relative lg:top-0 lg:right-0 lg:flex lg:items-center lg:bg-transparent lg:shadow-none lg:rounded-none z-50 px-8 pt-8 pb-6 lg:p-0`}
       >
-        <div className="lg:flex lg:justify-center lg:gap-12 text-white text-md font-normal nav-links">
-          <a href="#about" className="block lg:inline-block hover:scale-110 transition-transform mb-4 lg:mb-0">
+        <div className="lg:flex lg:justify-center lg:gap-12 text-white text-md nav-links">
+          <a
+            href="#about"
+            className="block lg:inline-block !font-bold text-[rgb(250,250,250)] lg:text-[rgb(205,214,244)] hover:scale-110 transition-transform mb-4 lg:mb-0"
+            >
             About
           </a>
-          <a href="#projects" className="block lg:inline-block hover:scale-110 transition-transform mb-4 lg:mb-0">
+          <a
+            href="#projects"
+            className="block lg:inline-block !font-bold text-[rgb(250,250,250)] lg:text-[rgb(205,214,244)] hover:scale-110 transition-transform mb-4 lg:mb-0"
+            >
             Work
           </a>
-          <a href="/James_Fu_Resume_2024.pdf" className="block lg:inline-block hover:scale-110 transition-transform mb-4 lg:mb-0">
+          <a
+            href="/James_Fu_Resume_2024.pdf"
+            className="block lg:inline-block !font-bold text-[rgb(250,250,250)] lg:text-[rgb(205,214,244)] hover:scale-110 transition-transform mb-4 lg:mb-0"
+            >
             Resume
           </a>
-          <a href="#contact" className="block lg:inline-block hover:scale-110 transition-transform mb-4 lg:mb-0">
+          <a
+            href="#contact"
+            className="block lg:inline-block !font-bold text-[rgb(250,250,250)] lg:text-[rgb(205,214,244)] hover:scale-110 transition-transform mb-4 lg:mb-0"
+            >
             Contact
           </a>
-          {/* Mobile-only Resume link */}
-          {/* <a href="/James_Fu_Resume_2024.pdf" className="block lg:hidden hover:scale-110 transition-transform mb-4 lg:mb-0">
-            Resume
-          </a> */}
         </div>
       </div>
     </nav>

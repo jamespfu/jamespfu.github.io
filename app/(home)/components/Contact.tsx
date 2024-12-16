@@ -17,7 +17,7 @@ export const Contact = () => {
             Let&apos;s talk
           </h1>
           <p className="text-gray-300 text-md mt-4 leading-8">
-            I&apos;m currently looking for full-time data science roles and internships for summer 2025. I&apos;d be happy to further discuss my experiences with you, simply shoot me an email or fill out the form below
+            I&apos;m currently looking for full-time opportunities in Data Science, Analytics, Software Engineering, or any related field. I&apos;d be happy to further discuss my experiences with you, simply shoot me an email or fill out the form below.
           </p>
 
           <div className="flex flex-col text-md text-gray-300 mt-8 space-y-4">

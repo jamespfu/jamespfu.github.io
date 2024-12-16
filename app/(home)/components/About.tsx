@@ -42,7 +42,7 @@ export default function About() {
           {/* First section */}
           <AboutSection 
             title="💙 🐻" 
-            description="I recently graduated from UCLA with a B.S. in Computational Biology (Data Science specialization). Over the few years, I've developed a passion for applying machine learning to real-world challenges, especially in data science and ML."
+            description="This past year, I graduated from UCLA with a B.S. in Computational Biology (Data Science concentration), where I developed a strong foundation in data science and software engineering, with a particular focus on NLP, design, and biotech applications. I'm mainly proficient in Python, but I occasionally dabble in languages like C++, JavaScript, SQL, and R."
           />
 
           {/* Horizontal divider with even spacing */}
@@ -50,8 +50,8 @@ export default function About() {
 
           {/* Second section */}
           <AboutSection 
-            title="📘 🤘" 
-            description="Currently, I'm a Master's student in Data Science at UT Austin, where I'm learning to build language models by working with transformers and architectures like GPT-3. My interests lie in uncovering patterns in data and I am particularly interested in applying machine learning to healthcare to make it more accessible and impactful."
+            title="👾 🤘" 
+            description="I'm a current Master's student at UT Austin studying Data Science, where I'm learning to build language models by working with transformers and architectures like GPT-3 and enhancing my skills in statistical methods."
           />
 
           {/* Horizontal divider with even spacing */}
@@ -60,7 +60,7 @@ export default function About() {
           {/* Third section */}
           <AboutSection 
             title="⚙️ 🍵" 
-            description="In my spare time, I enjoy cooking and recreating cafe drinks and playing tennis. Over the past 7+ years, I've developed various coding projects, with a focus on Python and full-stack development. I’m currently working on a cost equity modeler that helps users determine fair pricing for medical services by comparing insurance and non-insurance rates and implementing synthetic data generation."
+            description="Over the past 7+ years, I’ve worked on various coding projects, with a focus on Python and full-stack development. I'm also seeking full-time opportunities in Data Science, Analytics, Software Engineering, or any related field. If I'm not at my computer, you'll find me in the kitchen trying new recipes or outside playing tennis."
           />
         </div>
       </div>
