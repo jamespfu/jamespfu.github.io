@@ -10,7 +10,7 @@ interface AboutSectionProps {
 const AboutSection: React.FC<AboutSectionProps> = ({ title, description }) => (
   <div className="py-3"> {/* Consistent padding */}
     <h2 className="text-lg font-bold text-white mb-2">{title}</h2>
-    <p className="text-gray-400">{description}</p>
+    <p className="text-gray-300">{description}</p>
   </div>
 );
 
@@ -51,7 +51,7 @@ export default function About() {
           {/* Second section */}
           <AboutSection 
             title="👾 🤘" 
-            description="I'm a current Master's student at UT Austin studying Data Science, where I'm learning to build language models by working with transformers and architectures like GPT-3 and enhancing my skills in statistical methods."
+            description="I'm a Master's student in Data Science at UT Austin, studying transformer architectures like BERT and their applications in building LLMs. I'm also enhancing my skills in data analysis, statistical methods, and data structures and algorithms."
           />
 
           {/* Horizontal divider with even spacing */}

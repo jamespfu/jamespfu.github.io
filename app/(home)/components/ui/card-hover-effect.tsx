@@ -91,7 +91,7 @@ export const HoverEffect = ({
                     <Icon className="w-full h-full" />
                   )}
                 </div>
-                <p className="text-lg font-bold text-center text-gray-300">
+                <p className="text-lg font-bold text-center text-white">
                   {item.text}
                 </p>
               </div>

@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div className="mt-20 my-8 text-center">
       <h6>
-        Copyright © 2024 James Fu
+        Copyright © 2025 James Fu
         <br />
         palette inspired by{' '}
         <a 

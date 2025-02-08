@@ -53,7 +53,7 @@ export const DirectionAwareHover = ({
       {/* Text overlay with upward movement on hover */}
       <motion.div
         className={cn(
-          "text-white absolute bottom-4 left-4 z-20",
+          "text-white absolute bottom-4 left-4 right-4 z-20",
           childrenClassName
         )}
         variants={{

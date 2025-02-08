@@ -47,25 +47,25 @@ export default function Navbar() {
         <div className="lg:flex lg:justify-center lg:gap-12 text-white text-md nav-links">
           <a
             href="#about"
-            className="block lg:inline-block !font-bold text-[rgb(250,250,250)] lg:text-[rgb(205,214,244)] hover:scale-110 transition-transform mb-4 lg:mb-0"
+            className="block lg:inline-block !tracking-normal text-[rgb(250,250,250)] lg:text-white-300 hover:scale-110 transition-transform mb-4 lg:mb-0"
             >
             About
           </a>
           <a
             href="#projects"
-            className="block lg:inline-block !font-bold text-[rgb(250,250,250)] lg:text-[rgb(205,214,244)] hover:scale-110 transition-transform mb-4 lg:mb-0"
+            className="block lg:inline-block !tracking-normal text-[rgb(250,250,250)] lg:text-white-300 hover:scale-110 transition-transform mb-4 lg:mb-0"
             >
             Work
           </a>
           <a
             href="/James_Fu_Resume_2024.pdf"
-            className="block lg:inline-block !font-bold text-[rgb(250,250,250)] lg:text-[rgb(205,214,244)] hover:scale-110 transition-transform mb-4 lg:mb-0"
+            className="block lg:inline-block !tracking-normal text-[rgb(250,250,250)] lg:text-white-300 hover:scale-110 transition-transform mb-4 lg:mb-0"
             >
             Resume
           </a>
           <a
             href="#contact"
-            className="block lg:inline-block !font-bold text-[rgb(250,250,250)] lg:text-[rgb(205,214,244)] hover:scale-110 transition-transform mb-4 lg:mb-0"
+            className="block lg:inline-block !tracking-normal text-[rgb(250,250,250)] lg:text-white-300 hover:scale-110 transition-transform mb-4 lg:mb-0"
             >
             Contact
           </a>
