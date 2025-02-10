@@ -10,7 +10,7 @@ interface AboutSectionProps {
 const AboutSection: React.FC<AboutSectionProps> = ({ title, description }) => (
   <div className="py-3"> {/* Consistent padding */}
     <h2 className="text-lg font-bold text-white mb-2">{title}</h2>
-    <p className="text-gray-300">{description}</p>
+    <p className="text-gray-400">{description}</p>
   </div>
 );
 
@@ -43,6 +43,7 @@ export default function About() {
           <AboutSection 
             title="💙 🐻" 
             description="This past year, I graduated from UCLA with a B.S. in Computational Biology (Data Science concentration), where I developed a strong foundation in data science and software engineering, with a particular focus on NLP, design, and biotech applications. I'm mainly proficient in Python, but I occasionally dabble in languages like C++, JavaScript, SQL, and R."
+
           />
 
           {/* Horizontal divider with even spacing */}
@@ -51,7 +52,7 @@ export default function About() {
           {/* Second section */}
           <AboutSection 
             title="👾 🤘" 
-            description="I'm a Master's student in Data Science at UT Austin, studying transformer architectures like BERT and their applications in building LLMs. I'm also enhancing my skills in data analysis, statistical methods, and data structures and algorithms."
+            description="I'm a current Master's student at UT Austin studying Data Science, where I'm learning about transformer architectures like BERT and how they can be used to build LLMS, and enhancing my skills in data analysis and statistical methods and data."
           />
 
           {/* Horizontal divider with even spacing */}
@@ -60,7 +61,7 @@ export default function About() {
           {/* Third section */}
           <AboutSection 
             title="⚙️ 🍵" 
-            description="Over the past 7+ years, I’ve worked on various coding projects, with a focus on Python and full-stack development. I'm also seeking full-time opportunities in Data Science, Analytics, Software Engineering, or any related field. If I'm not at my computer, you'll find me in the kitchen trying new recipes or outside playing tennis."
+            description="Over the past 7+ years, I’ve worked on various coding projects, with a focus on Python and full-stack development. I'm also seeking full-time opportunities in Data Science, Analytics, Software Engineering, or any related field. If I'm not at my computer, you'll find me in the kitchen trying new recipes and recreating viral cafe drinks, or outside playing tennis."
           />
         </div>
       </div>

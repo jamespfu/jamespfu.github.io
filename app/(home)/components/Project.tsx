@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import { SiPython, SiPytorch, SiPandas, SiTensorflow, SiScikitlearn, SiOpencv, SiDialogflow, SiGoogleassistant } from "react-icons/si";
+import { SiPython, SiPytorch, SiPandas, SiTensorflow, SiScikitlearn, SiOpencv, SiKeras, SiDialogflow, SiGoogleassistant } from "react-icons/si";
 import { FaJava, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Title from "./Title";
 import { cn } from "@/lib/utils";
@@ -24,16 +24,16 @@ export default function Project() {
             link: "/NLI Robustness Study - James Fu.pdf",
             cover: "/SNLI_dark.png",
             background: "bg-zinc-900",
-            description: "Followed-up on methods explored in Swayamdipta et al. (2020) to improve NLI robustness. Fine-tuned ELECTRA-small using dataset cartography and contrast sets with distractors, reweighting hard-to-learn examples during training to reduce artifacts. Achieved an 8% accuracy increase on novel contrast sets after adding distractors and reweighting train set to improve model robustness.",
+            description: "Followed-up on methods explored in Swayamdipta et al. (2020) to improve NLI robustness. Fine-tuned ELECTRA-small using dataset cartography and contrast sets with distractors, reweighting hard-to-learn examples during training to reduce artifacts. Achieved an 8% accuracy increase on novel contrast sets.",
         },
         {
             title: "Faircare, LA Hacks 2024",
             subtitle: "Developing Faircare for Transparent Pricing",
-            tech: [SiPython, SiPytorch, SiTensorflow],
+            tech: [SiPython, SiKeras, SiPytorch],
             link: "",
             cover: "/project-3.png",
             background: "bg-zinc-900",
-            description: "A healthcare cost modeling website that implements ML-algorithms and deep learning to generate synthetic data and determine fair medical costs with high accuracy and providing users regardless of insurance coverage with transparent pricing estimates.",
+            description: "A healthcare cost modeling website that leverages machine learning and deep learning to generate synthetic data and make accurate cost predictions. It provides intuitive visualizations summarizing fair treatment cost estimates, ensuring transparency for all users, regardless of insurance coverage.",
         },
         {
             title: "Dotmentia, Los Altos Hacks IV",
@@ -97,7 +97,7 @@ export default function Project() {
             {/* Left Arrow (Only Visible on Desktop) */}
             <button 
                 onClick={handlePrev} 
-                className="hidden sm:block absolute left-[-70px] top-1/2 transform -translate-y-1/2 z-10 bg-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-700 transition"
+                className="hidden sm:block absolute left-[-20px] top-1/2 transform -translate-y-1/2 z-10 bg-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-700 transition"
             >
                 <FaChevronLeft className="text-white w-6 h-6" />
             </button>
@@ -130,10 +130,11 @@ export default function Project() {
                                 </h1>
                                 <DirectionAwareHover 
                                     imageUrl={project.cover} 
-                                    className="w-full space-y-5 h-[24rem] sm:h-[22rem] cursor-pointer"
+                                    className="w-full space-y-5 h-[29rem] sm:h-[24rem] cursor-pointer"
                                 >
+
                                     <div className="space-y-5 m-[10px]">
-                                        <h2 className="hidden sm:block text-md font-semibold text-white-300 text-left">
+                                        <h2 className="text-md font-semibold text-white-300 text-left">
                                             {project.subtitle}
                                         </h2>
                                         <p className="text-sm text-gray-300">{project.description}</p>
@@ -142,7 +143,11 @@ export default function Project() {
                                                 <Icon key={idx} className="w-5 h-5 text-gray-300" />
                                             ))}
                                         </div>
-                                        
+                                        <div className="mt-10"> {/* Fixed typo from mt=[10px] to mt-10 */}
+                                            <a href={project.link} className="inline-flex text-sm items-center px-4 py-2 text-white font-semibold rounded-sm bg-gradient-to-r from-indigo-900 to-purple-800 hover:from-indigo-800 hover:to-purple-700 shadow-lg">
+                                                Read More
+                                            </a>
+                                        </div>
                                     </div>
                                 </DirectionAwareHover>
                             </div>
@@ -154,7 +159,7 @@ export default function Project() {
             {/* Right Arrow (Only Visible on Desktop) */}
             <button 
                 onClick={handleNext} 
-                className="hidden sm:block absolute right-[-70px] top-1/2 transform -translate-y-1/2 z-10 bg-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-700 transition"
+                className="hidden sm:block absolute right-[-20px] top-1/2 transform -translate-y-1/2 z-10 bg-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-700 transition"
             >
                 <FaChevronRight className="text-white w-6 h-6" />
             </button>

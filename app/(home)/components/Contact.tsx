@@ -31,7 +31,7 @@ export const Contact = () => {
             </div>
             <div className="flex items-center gap-5">
               <FontAwesomeIcon icon={faMapMarkerAlt} className="w-4 h-4" />
-              <p>CA, United States</p>
+              <p></p>
             </div>
           </div>
         </div>
