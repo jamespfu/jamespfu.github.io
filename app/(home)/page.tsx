@@ -10,7 +10,7 @@ import '../globals.css';
 
 export default function page() {
   return (
-    <div className="min-h-[100vh] overflow-hidden" style={{ backgroundColor: 'rgb(23, 23, 39)' }}>
+    <div className="min-h-[100vh] overflow-hidden" style={{ backgroundColor: 'rgb(21, 21, 37)' }}>
       <div className="relative">
         <div className="max-w-7xl mx-auto p-5">
           <Navbar />
