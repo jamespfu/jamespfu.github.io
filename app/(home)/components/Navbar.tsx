@@ -58,16 +58,16 @@ export default function Navbar() {
             Work
           </a>
           <a
-            href="/James_Fu_Resume_2024.pdf"
-            className="block lg:inline-block !tracking-normal text-[rgb(250,250,250)] lg:text-white-300 hover:scale-110 transition-transform mb-4 lg:mb-0"
-            >
-            Resume
-          </a>
-          <a
             href="#contact"
             className="block lg:inline-block !tracking-normal text-[rgb(250,250,250)] lg:text-white-300 hover:scale-110 transition-transform mb-4 lg:mb-0"
             >
             Contact
+          </a>
+          <a
+            href="/James_Fu_Resume_2024.pdf"
+            className="block lg:inline-block !tracking-normal text-[rgb(250,250,250)] lg:text-white-300 hover:scale-110 transition-transform mb-4 lg:mb-0"
+            >
+            Resume
           </a>
         </div>
       </div>
