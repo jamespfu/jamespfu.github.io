@@ -32,7 +32,7 @@ export default function About() {
               borderRadius="0.5rem"
               className="p-3 font-semibold"
             >
-              <a href="/James_Fu_Resume_2024.pdf">📄 &nbsp; View Resume</a>
+              <a href="/James_Fu_Resume_2025.pdf">📄 &nbsp; View Resume</a>
             </MovingBorderBtn>
           </div>
         </div>
