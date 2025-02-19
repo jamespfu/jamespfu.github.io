@@ -64,7 +64,7 @@ export default function Navbar() {
             Contact
           </a>
           <a
-            href="/James_Fu_Resume_2025.pdf"
+            href="/JamesFu_Resume.pdf"
             className="block lg:inline-block !tracking-normal text-[rgb(250,250,250)] lg:text-white-300 hover:scale-110 transition-transform mb-4 lg:mb-0"
             >
             Resume
