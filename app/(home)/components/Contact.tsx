@@ -1,6 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import Title from './Title';
 
 export const Contact = () => {
@@ -22,15 +21,11 @@ export const Contact = () => {
 
           <div className="flex flex-col text-md text-gray-300 mt-8 space-y-4">
             <div className="flex items-center gap-5">
-              <FontAwesomeIcon icon={faEnvelope} className="w-4 h-4" />
+              <FaEnvelope className="w-4 h-4 text-white" />
               <p>jamesfup@gmail.com</p>
             </div>
-            {/* <div className="flex items-center gap-5">
-              <FontAwesomeIcon icon={faPhone} className="w-4 h-4" />
-              <p>+1 (XXX)&nbsp;XXX-XXXX</p>
-            </div> */}
             <div className="flex items-center gap-5">
-              <FontAwesomeIcon icon={faMapMarkerAlt} className="w-4 h-4" />
+              <FaMapMarkerAlt className="w-4 h-4 text-white" />
               <p>San Jose, CA</p>
             </div>
           </div>
@@ -46,7 +41,7 @@ export const Contact = () => {
           <input 
             type="text" 
             name="name" 
-            id="name"  // Added id attribute
+            id="name"  
             placeholder="Enter your name" 
             className="border border-gray-500 w-full lg:w-96 h-16 p-4 rounded-md bg-white/10 text-gray-300 text-lg"
           />
@@ -55,7 +50,7 @@ export const Contact = () => {
           <input 
             type="email" 
             name="email" 
-            id="email"  // Added id attribute
+            id="email"  
             placeholder="Enter your email" 
             className="border border-gray-500 w-full lg:w-96 h-16 p-4 rounded-md bg-white/10 text-gray-300 text-lg"
           />
@@ -63,7 +58,7 @@ export const Contact = () => {
           <label htmlFor="message" className="text-white text-base font-medium">Write your message here</label>
           <textarea 
             name="message" 
-            id="message"  // Added id attribute
+            id="message"  
             rows={6}
             placeholder="Enter your message" 
             className="border border-gray-500 w-full lg:w-96 p-4 rounded-md bg-white/10 text-gray-300 text-lg"

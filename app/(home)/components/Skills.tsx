@@ -10,19 +10,19 @@ import {
     SiGit,
     SiReact, 
 } from 'react-icons/si';
-import { faDatabase, faChartBar, faBoxesStacked, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
+import { FaDatabase, FaChartBar, FaBoxesStacked, FaNetworkWired } from 'react-icons/fa6';
 
 export default function Skills() {
     const skills = [
         // 1. Core Language & Data Wrangling (The foundation)
         { text: 'Python', Icon: SiPython },  
         { text: 'Pandas', Icon: SiPandas },  
-        { text: 'SQL', Icon: faDatabase, isFontAwesome: true },  
+        { text: 'SQL', Icon: FaDatabase },  
         
         // 2. Supply Chain & Operations Core (Your professional focus)
-        { text: 'SAP ERP', Icon: faBoxesStacked, isFontAwesome: true }, 
-        { text: 'Power Automate', Icon: faNetworkWired, isFontAwesome: true },  
-        { text: 'Tableau', Icon: faChartBar, isFontAwesome: true },  
+        { text: 'SAP ERP', Icon: FaBoxesStacked }, 
+        { text: 'Power Automate', Icon: FaNetworkWired },  
+        { text: 'Tableau', Icon: FaChartBar },  
         
         // 3. Machine Learning (Kept light for general technical depth)
         { text: 'PyTorch', Icon: SiPytorch },  
