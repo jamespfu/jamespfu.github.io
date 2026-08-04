@@ -61,7 +61,7 @@ export default function About() {
             />
           </div>
           <h2 className="text-2xl font-bold text-white mt-2">James Fu</h2>
-          <p className="text-purple-300 text-sm mt-1 mb-6">Analytics & Supply Chain Professional</p>
+          <p className="text-purple-300 text-sm mt-1 mb-6">MSDS @ UT Austin</p>
           
           {/* Quick Stats Grid */}
           <div className="grid grid-cols-2 gap-3 w-full max-w-[280px]">
