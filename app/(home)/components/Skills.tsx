@@ -6,24 +6,28 @@ import { HoverEffect } from './ui/card-hover-effect';
 import { 
     SiPython, 
     SiPytorch, 
-    SiTensorflow, 
     SiPandas, 
-    SiScikitlearn, 
-    SiTableau,
     SiGit,
     SiReact, 
 } from 'react-icons/si';
-import { faDatabase } from '@fortawesome/free-solid-svg-icons'; // Database icon for SQL
+import { faDatabase, faChartBar, faBoxesStacked, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
 
 export default function Skills() {
     const skills = [
+        // 1. Core Language & Data Wrangling (The foundation)
         { text: 'Python', Icon: SiPython },  
-        { text: 'PyTorch', Icon: SiPytorch },  
-        { text: 'TensorFlow', Icon: SiTensorflow },  
         { text: 'Pandas', Icon: SiPandas },  
-        { text: 'SQL', Icon: faDatabase, isFontAwesome: true }, // Specify FontAwesome icons with a flag
-        { text: 'scikit-learn', Icon: SiScikitlearn },  
-        { text: 'Tableau', Icon: SiTableau },  
+        { text: 'SQL', Icon: faDatabase, isFontAwesome: true },  
+        
+        // 2. Supply Chain & Operations Core (Your professional focus)
+        { text: 'SAP ERP', Icon: faBoxesStacked, isFontAwesome: true }, 
+        { text: 'Power Automate', Icon: faNetworkWired, isFontAwesome: true },  
+        { text: 'Tableau', Icon: faChartBar, isFontAwesome: true },  
+        
+        // 3. Machine Learning (Kept light for general technical depth)
+        { text: 'PyTorch', Icon: SiPytorch },  
+        
+        // 4. Engineering & Web Tools (Development support)
         { text: 'Git', Icon: SiGit },  
         { text: 'React', Icon: SiReact },
     ];

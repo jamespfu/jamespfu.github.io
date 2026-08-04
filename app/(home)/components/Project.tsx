@@ -14,7 +14,7 @@ export default function Project() {
             tech: [SiPython, SiPandas, SiScikitlearn],
             link: "/James_Fu_Poster_Final.pdf",
             cover: "/project-2.png",
-            background: "bg-zinc-900",
+            background: "bg-[#0b0d14]",
             description: "Developed a pipeline using unsupervised machine learning to identify six astrocyte subtypes through spatial clustering of spatial transcriptomic data from the Allen Mouse Brain Atlas, discovered 104 astrocyte-specific genes through differential expression analysis with Bonferroni correction across 10+ million cells.",
         },
         {
@@ -23,17 +23,17 @@ export default function Project() {
             tech: [SiPython, SiPytorch, SiTensorflow],
             link: "/NLI Robustness Study - James Fu.pdf",
             cover: "/SNLI_dark.png",
-            background: "bg-zinc-900",
+            background: "bg-[#0b0d14]",
             description: "Followed-up on methods explored in Swayamdipta et al. (2020) to improve NLI robustness. Fine-tuned ELECTRA-small using dataset cartography and contrast sets with distractors, reweighting hard-to-learn examples during training to reduce artifacts. Achieved an 8% accuracy increase on novel contrast sets.",
         },
         {
             title: "Faircare, LA Hacks 2024",
             subtitle: "Developing Faircare for Transparent Pricing",
             tech: [SiPython, SiKeras, SiPytorch],
-            link: "",
+            link: "/",
             cover: "/project-3.png",
-            background: "bg-zinc-900",
-            description: "A healthcare cost modeling website that leverages machine learning and deep learning to generate synthetic data and make accurate cost predictions. It provides intuitive visualizations summarizing fair treatment cost estimates, ensuring transparency for all users, regardless of insurance coverage.",
+            background: "bg-[#0b0d14]",
+            description: "Built a healthcare cost modeling website leveraging synthetic data augmentation and data analysis to make accurate cost predictions. Increasing volume of MEPS dataset by 253%, this tool provides intuitive visualizations summarizing fair treatment cost estimates, ensuring transparency for all users, regardless of insurance coverage.",
         },
         {
             title: "Dotmentia, Los Altos Hacks IV",
@@ -41,7 +41,7 @@ export default function Project() {
             tech: [SiOpencv, SiDialogflow, SiGoogleassistant, FaJava],
             link: "https://devpost.com/software/dotmentia",
             cover: "/googlehome.jpg",
-            background: "bg-zinc-900",
+            background: "bg-[#0b0d14]",
             description: "Won 1st place by building Dotmentia, an assistive AI system that leverages facial recognition (OpenCV) and Google Assistant integration (DialogFlow) to help dementia patients recognize family members and those around them in real-time, enhancing their daily interactions and independence."
         },
     ];
@@ -52,117 +52,135 @@ export default function Project() {
 
     const scrollToProject = (index) => {
         if (scrollContainerRef.current) {
-            const projectWidth = scrollContainerRef.current.children[index].offsetWidth;
-            scrollContainerRef.current.scrollTo({
-                left: index * projectWidth,
-                behavior: "smooth",
-            });
+            const container = scrollContainerRef.current;
+            const card = container.children[index];
+            if (card) {
+                const gap = 24; 
+                const scrollLeft = index * (card.offsetWidth + gap);
+                container.scrollTo({
+                    left: scrollLeft,
+                    behavior: "smooth",
+                });
+            }
         }
     };
 
     const handleNext = () => {
-        if (currentIndex === projects.length - 1) {
-            scrollToProject(0);
-            setCurrentIndex(0);
-        } else {
-            scrollToProject(currentIndex + 1);
-            setCurrentIndex(currentIndex + 1);
-        }
+        const nextIndex = currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
+        setCurrentIndex(nextIndex);
+        scrollToProject(nextIndex);
     };
 
     const handlePrev = () => {
-        if (currentIndex === 0) {
-            scrollToProject(projects.length - 1);
-            setCurrentIndex(projects.length - 1);
-        } else {
-            scrollToProject(currentIndex - 1);
-            setCurrentIndex(currentIndex - 1);
-        }
+        const prevIndex = currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
+        setCurrentIndex(prevIndex);
+        scrollToProject(prevIndex);
     };
 
     useEffect(() => {
         if (isHovered) return;
 
         const interval = setInterval(() => {
-            handleNext();
+            setCurrentIndex((prevIndex) => {
+                const nextIndex = prevIndex === projects.length - 1 ? 0 : prevIndex + 1;
+                scrollToProject(nextIndex);
+                return nextIndex;
+            });
         }, 5000);
 
         return () => clearInterval(interval);
-    }, [currentIndex, isHovered]);
+    }, [isHovered, projects.length]);
 
     return (
-        <div id="projects" className="relative p-5 sm:p-0 py-10 mt-20 px-4">
-            <Title text="Projects" className="flex flex-col items-center justify-center" />
+        <div id="projects" className="relative max-w-6xl mx-auto py-16 px-6 lg:px-12 mt-10">
+            <Title text="Projects" className="flex flex-col items-center justify-center mb-12" />
 
-            {/* Left Arrow (Only Visible on Desktop) */}
-            <button 
-                onClick={handlePrev} 
-                className="hidden sm:block absolute left-[-20px] top-1/2 transform -translate-y-1/2 z-10 bg-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-700 transition"
-            >
-                <FaChevronLeft className="text-white w-6 h-6" />
-            </button>
-
-
-
-            {/* Scrollable Container */}
-            <div 
-                ref={scrollContainerRef} 
-                className="w-full flex flex-col sm:flex-row overflow-x-auto sm:space-x-5 scrollbar-hide scroll-smooth mt-10 p-5 justify-start snap-x snap-mandatory"
-                onMouseEnter={() => setIsHovered(true)} 
-                onMouseLeave={() => setIsHovered(false)}
-            >
-                {projects.map((project, index) => (
-                    <div 
-                    key={index} 
-                    className="flex flex-col w-full sm:w-[500px] flex-shrink-0 snap-center my-5 sm:my-0"
+            <div className="relative group">
+                {/* Left Navigation Arrow - Positioned cleanly outside the card boundary */}
+                <button 
+                    onClick={handlePrev} 
+                    aria-label="Previous Project"
+                    className="hidden lg:flex items-center justify-center absolute -left-7 top-1/2 -translate-y-1/2 z-30 bg-[#0b0d14] border border-gray-800 text-white p-3 rounded-full shadow-2xl hover:bg-purple-950/40 hover:border-purple-500/50 transition-all"
                 >
-                        <div className={cn("p-0 rounded-md shadow-lg flex flex-col h-full", project.background)}>
-                            <div className="flex items-center space-x-2 p-2 bg-gray-800 rounded-t-md">
-                                <div className="flex space-x-2 ml-2">
-                                    <span className="w-3 h-3 bg-red-500 rounded-full"></span>
-                                    <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
-                                    <span className="w-3 h-3 bg-green-500 rounded-full"></span>
-                                </div>
-                            </div>
-                            <div className="p-4 flex-grow">
-                                <h1 className="text-lg font-semibold text-white text-center py-4">
-                                    {project.title}
-                                </h1>
-                                <DirectionAwareHover 
-                                    imageUrl={project.cover} 
-                                    className="w-full space-y-5 h-[29rem] sm:h-[24rem] cursor-pointer"
-                                >
+                    <FaChevronLeft className="w-4 h-4" />
+                </button>
 
-                                    <div className="space-y-5 m-[10px]">
-                                        <h2 className="text-md font-semibold text-white-300 text-left">
-                                            {project.subtitle}
-                                        </h2>
-                                        <p className="text-sm text-gray-300">{project.description}</p>
-                                        <div className="hidden sm:flex items-center gap-5">
-                                            {project.tech.map((Icon, idx) => (
-                                                <Icon key={idx} className="w-5 h-5 text-gray-300" />
-                                            ))}
-                                        </div>
-                                        <div className="mt-10"> {/* Fixed typo from mt=[10px] to mt-10 */}
-                                            <a href={project.link} className="inline-flex text-sm items-center px-4 py-2 text-white font-semibold rounded-sm bg-gradient-to-r from-indigo-900 to-purple-800 hover:from-indigo-800 hover:to-purple-700 shadow-lg">
-                                                Read More
-                                            </a>
-                                        </div>
+                {/* Scrollable Container */}
+                <div 
+                    ref={scrollContainerRef} 
+                    className="w-full flex flex-col lg:flex-row overflow-x-auto gap-6 scrollbar-hide scroll-smooth p-2 justify-start snap-x snap-mandatory"
+                    onMouseEnter={() => setIsHovered(true)} 
+                    onMouseLeave={() => setIsHovered(false)}
+                >
+                    {projects.map((project, index) => (
+                        <div 
+                            key={index} 
+                            className="flex flex-col w-full lg:w-[calc(50%-12px)] flex-shrink-0 snap-center"
+                        >
+                            {/* macOS Window Frame Container */}
+                            <div className={cn("rounded-xl border border-gray-800 shadow-2xl overflow-hidden flex flex-col h-full bg-[#0b0d14]", project.background)}>
+                                
+                                {/* macOS Window Titlebar */}
+                                <div className="flex items-center justify-between px-4 py-3 bg-[#131620] border-b border-gray-800/80">
+                                    <div className="flex items-center space-x-2">
+                                        <span className="w-3 h-3 bg-[#ff5f56] rounded-full inline-block shadow-inner"></span>
+                                        <span className="w-3 h-3 bg-[#ffbd2e] rounded-full inline-block shadow-inner"></span>
+                                        <span className="w-3 h-3 bg-[#27c93f] rounded-full inline-block shadow-inner"></span>
                                     </div>
-                                </DirectionAwareHover>
+                                    <span className="text-xs text-gray-400 font-mono tracking-wider truncate max-w-[250px] sm:max-w-xs">
+                                        {project.title}
+                                    </span>
+                                    <div className="w-10"></div> {/* Spacer for symmetry */}
+                                </div>
+
+                                {/* Window Body */}
+                                <div className="p-5 flex-grow flex flex-col">
+                                    <DirectionAwareHover 
+                                        imageUrl={project.cover} 
+                                        className="w-full h-[26rem] sm:h-[22rem] cursor-pointer rounded-lg overflow-hidden border border-gray-800/50"
+                                    >
+                                        <div className="space-y-3 p-3 backdrop-blur-md bg-black/60 rounded-lg">
+                                            <h4 className="text-sm font-semibold text-purple-300">
+                                                {project.subtitle}
+                                            </h4>
+                                            <p className="text-xs sm:text-sm text-gray-200 leading-relaxed">{project.description}</p>
+                                            
+                                            <div className="flex items-center gap-4 pt-1">
+                                                {project.tech.map((Icon, idx) => (
+                                                    <Icon key={idx} className="w-4 h-4 text-gray-300" />
+                                                ))}
+                                            </div>
+
+                                            {project.link && (
+                                                <div className="pt-2">
+                                                    <a 
+                                                        href={project.link} 
+                                                        target="_blank" 
+                                                        rel="noopener noreferrer"
+                                                        className="inline-flex text-xs items-center px-4 py-2 text-white font-semibold rounded-md bg-gradient-to-r from-purple-900 to-purple-800 hover:from-purple-800 hover:to-purple-700 shadow-lg transition-all"
+                                                    >
+                                                        Read More <span className="ml-1">→</span>
+                                                    </a>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </DirectionAwareHover>
+                                </div>
+
                             </div>
                         </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
 
-            {/* Right Arrow (Only Visible on Desktop) */}
-            <button 
-                onClick={handleNext} 
-                className="hidden sm:block absolute right-[-20px] top-1/2 transform -translate-y-1/2 z-10 bg-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-700 transition"
-            >
-                <FaChevronRight className="text-white w-6 h-6" />
-            </button>
+                {/* Right Navigation Arrow - Positioned cleanly outside the card boundary */}
+                <button 
+                    onClick={handleNext} 
+                    aria-label="Next Project"
+                    className="hidden lg:flex items-center justify-center absolute -right-7 top-1/2 -translate-y-1/2 z-30 bg-[#0b0d14] border border-gray-800 text-white p-3 rounded-full shadow-2xl hover:bg-purple-950/40 hover:border-purple-500/50 transition-all"
+                >
+                    <FaChevronRight className="w-4 h-4" />
+                </button>
+            </div>
         </div>
     );
 }

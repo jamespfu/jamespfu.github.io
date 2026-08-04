@@ -7,17 +7,17 @@ export const Contact = () => {
   return (
     <section id="contact" className="flex flex-col items-center justify-center gap-10 mx-10 lg:mx-36 my-20">
       <div className="text-center relative">
-        <Title text="Get in touch" className="flex flex-col items-center justify-center" />
+        <Title text="Contact Me" className="flex flex-col items-center justify-center" />
       </div>
 
       <div className="flex flex-col lg:flex-row gap-10 lg:gap-32">
         {/* Contact Left */}
         <div className="flex flex-col max-w-lg">
           <h1 className="text-2xl font-bold intro">
-            Let&apos;s talk
+            Get in touch
           </h1>
           <p className="text-gray-300 text-md mt-4 leading-8">
-            I&apos;m currently looking for full-time opportunities in Data Science, Analytics, Software Engineering, or any related field. I&apos;d be happy to further discuss my experiences with you, simply shoot me an email or fill out the form below.
+            Always open to connect or learn about new opportunities.
           </p>
 
           <div className="flex flex-col text-md text-gray-300 mt-8 space-y-4">
@@ -25,13 +25,13 @@ export const Contact = () => {
               <FontAwesomeIcon icon={faEnvelope} className="w-4 h-4" />
               <p>jamesfup@gmail.com</p>
             </div>
-            <div className="flex items-center gap-5">
+            {/* <div className="flex items-center gap-5">
               <FontAwesomeIcon icon={faPhone} className="w-4 h-4" />
-              <p>+1 (925)&nbsp;875-8886</p>
-            </div>
+              <p>+1 (XXX)&nbsp;XXX-XXXX</p>
+            </div> */}
             <div className="flex items-center gap-5">
               <FontAwesomeIcon icon={faMapMarkerAlt} className="w-4 h-4" />
-              <p>Bay Area, CA</p>
+              <p>San Jose, CA</p>
             </div>
           </div>
         </div>

@@ -6,7 +6,6 @@ import Project from './components/Project';
 import Footer from './components/Footer';
 import { Contact } from './components/Contact';
 import About from './components/About';
-import '../globals.css';
 
 export default function page() {
   return (
